@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>RAG Chatbot</h1>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">
+                Welcome to the RAG Chatbot. I am ready to answer your questions about the text I've been trained on.
+            </div>
+        </div>
+        <div class="chat-input">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Enter your question..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const userInput = document.getElementById('user-input');
+            const question = userInput.value;
+            const submitButton = e.target.querySelector('button');
+            
+            // Disable the submit button while processing
+            submitButton.disabled = true;
+            
+            // Add user message to chat
+            addMessage(question, 'user');
+            userInput.value = '';
+            
+            try {
+                console.log('Sending request to server...');
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ question: question })
+                });
+                
+                console.log('Response received:', response);
+                
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Data received:', data);
+                
+                // Add bot response to chat
+                addMessage(data.answer, 'bot');
+                
+                // Add context if available
+                if (data.context && data.context.length > 0) {
+                    addMessage('Context used:', 'system');
+                    data.context.forEach((chunk, index) => {
+                        addMessage(`Chunk ${index + 1}: ${chunk}`, 'system');
+                    });
+                }
+            } catch (error) {
+                console.error('Error details:', error);
+                addMessage(`Error: ${error.message}`, 'error');
+            } finally {
+                // Re-enable the submit button
+                submitButton.disabled = false;
+            }
+        });
+
+        function addMessage(text, type) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.textContent = text;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+    </script>
+</body>
+</html> 

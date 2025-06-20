@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    border: 1px solid black;
+}
+
+.message.user {
+    background-color: black;
+    color: white;
+    margin-left: auto;
+}
+
+.message.bot {
+    background-color: white;
+    color: black;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+.message.system {
+    background-color: white;
+    color: black;
+    font-size: 0.9em;
+    border: 1px dashed black;
+    margin: 10px auto;
+    max-width: 90%;
+}
+
+.message.error {
+    background-color: black;
+    color: white;
+    margin: 10px auto;
+    max-width: 90%;
+}
+
+.chat-input {
+    padding: 20px;
+    border-top: 2px solid black;
+    background-color: white;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    background-color: white;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+button:disabled {
+    background-color: #666;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* Custom scrollbar for retro feel */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 1px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+} 
