@@ -2,6 +2,15 @@
 
 A Retrieval-Augmented Generation (RAG) chatbot built with Flask and Mistral AI.
 
+**Created by [Halim Madi](https://www.halimmadi.com)**
+
+This is a sample project designed for students, workshops, and educational purposes. Feel free to use, modify, and distribute this code as you wish for learning and development.
+
+## About the Creator
+
+- **Website**: [www.halimmadi.com](https://www.halimmadi.com)
+- **Instagram**: [@yalla_halim](https://www.instagram.com/yalla_halim/)
+
 ## Setup
 
 1. Clone the repository
@@ -48,4 +57,15 @@ The application will be available at `http://localhost:5001`
 - `static/`: Static files (CSS, JS)
 - `essay.txt`: Source text for the RAG system
 - `requirements.txt`: Python dependencies
-- `vercel.json`: Vercel deployment configuration 
+- `vercel.json`: Vercel deployment configuration
+
+## Usage and Licensing
+
+This project is provided as a learning resource for students and workshop participants. You are free to:
+
+- Use this code for educational purposes
+- Modify and adapt it for your own projects
+- Share it with others for learning
+- Use it in workshops and tutorials
+
+Feel free to reach out to [Halim Madi](https://www.halimmadi.com) with any questions or feedback! 
