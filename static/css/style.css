@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: red;
 }
 
 .chat-container {
@@ -20,16 +20,16 @@ body {
     max-width: 800px;
     height: 90vh;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
 }
 
 .chat-header {
     padding: 20px;
-    background-color: black;
+    background-color: red;
     color: white;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid red;
 }
 
 .chat-header h1 {
@@ -51,33 +51,33 @@ body {
     padding: 10px 15px;
     max-width: 80%;
     word-wrap: break-word;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 
 .message.user {
-    background-color: black;
+    background-color: red;
     color: white;
     margin-left: auto;
 }
 
 .message.bot {
     background-color: white;
-    color: black;
+    color: red;
     margin-right: auto;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 
 .message.system {
     background-color: white;
-    color: black;
+    color: red;
     font-size: 0.9em;
-    border: 1px dashed black;
+    border: 1px dashed red;
     margin: 10px auto;
     max-width: 90%;
 }
 
 .message.error {
-    background-color: black;
+    background-color: red;
     color: white;
     margin: 10px auto;
     max-width: 90%;
@@ -85,7 +85,7 @@ body {
 
 .chat-input {
     padding: 20px;
-    border-top: 2px solid black;
+    border-top: 2px solid red;
     background-color: white;
 }
 
@@ -97,7 +97,7 @@ body {
 #user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid red;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
     background-color: white;
@@ -105,9 +105,9 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: black;
+    background-color: red;
     color: white;
-    border: 1px solid black;
+    border: 1px solid red;
     cursor: pointer;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
@@ -117,7 +117,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: black;
+    color: red;
 }
 
 button:disabled {
@@ -133,14 +133,14 @@ button:disabled {
 
 ::-webkit-scrollbar-track {
     background: white;
-    border: 1px solid black;
+    border: 1px solid red;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
-    border: 1px solid black;
+    background: red;
+    border: 1px solid red;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #333;
+    background: #cc0000;
 } 
