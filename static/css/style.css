@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: #2563eb;
 }
 
 .chat-container {
@@ -20,16 +20,16 @@ body {
     max-width: 800px;
     height: 90vh;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid #2563eb;
     display: flex;
     flex-direction: column;
 }
 
 .chat-header {
     padding: 20px;
-    background-color: black;
+    background-color: #2563eb;
     color: white;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #2563eb;
 }
 
 .chat-header h1 {
@@ -51,33 +51,33 @@ body {
     padding: 10px 15px;
     max-width: 80%;
     word-wrap: break-word;
-    border: 1px solid black;
+    border: 1px solid #2563eb;
 }
 
 .message.user {
-    background-color: black;
+    background-color: #2563eb;
     color: white;
     margin-left: auto;
 }
 
 .message.bot {
     background-color: white;
-    color: black;
+    color: #2563eb;
     margin-right: auto;
-    border: 1px solid black;
+    border: 1px solid #2563eb;
 }
 
 .message.system {
     background-color: white;
-    color: black;
+    color: #2563eb;
     font-size: 0.9em;
-    border: 1px dashed black;
+    border: 1px dashed #2563eb;
     margin: 10px auto;
     max-width: 90%;
 }
 
 .message.error {
-    background-color: black;
+    background-color: #2563eb;
     color: white;
     margin: 10px auto;
     max-width: 90%;
@@ -85,7 +85,7 @@ body {
 
 .chat-input {
     padding: 20px;
-    border-top: 2px solid black;
+    border-top: 2px solid #2563eb;
     background-color: white;
 }
 
@@ -97,7 +97,7 @@ body {
 #user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid #2563eb;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
     background-color: white;
@@ -105,9 +105,9 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: black;
+    background-color: #2563eb;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #2563eb;
     cursor: pointer;
     font-family: "Times New Roman", Times, serif;
     font-size: 1rem;
@@ -117,11 +117,11 @@ button {
 
 button:hover {
     background-color: white;
-    color: black;
+    color: #2563eb;
 }
 
 button:disabled {
-    background-color: #666;
+    background-color: #93c5fd;
     color: white;
     cursor: not-allowed;
 }
@@ -133,14 +133,14 @@ button:disabled {
 
 ::-webkit-scrollbar-track {
     background: white;
-    border: 1px solid black;
+    border: 1px solid #2563eb;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: black;
-    border: 1px solid black;
+    background: #2563eb;
+    border: 1px solid #2563eb;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #333;
+    background: #1d4ed8;
 } 
